@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
   <head>
     <title>Bookers2Ver2</title>
     <%= csrf_meta_tags %>
@@ -8,11 +8,14 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
     <%= render 'layouts/header' %>
       <main>
         <p id="notice"><%= notice %></p>
+        <div id="main"><%= yield :layout  %></div>
       </main>
     <%= render 'layouts/footer' %>
+
   </body>
 </html>
