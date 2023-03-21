@@ -24,6 +24,10 @@
             <% end %>
         </tr>
       </table>
+      <!--コメント削除-->
+        <% if book_comment.user == current_user %>
+          <%= link_to “destroy”, book_post_comment_path(book_comment.book, book_comment), method: :delete %>
+        <% end %>
     </div>
   </div>
 </div>
