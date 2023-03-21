@@ -48,7 +48,8 @@
            <!--コメント投稿-->
           <div>
             <%= form_with model:[@book, @book_comment] do |f| %>
-              <%= f.text_area :comment, rows: '5' %>
+              <%= f.text_area :comment, class: 'form-control book_comment' %><dr>
+              <dr>
               <dr>
               <%= f.submit "送信" %>
             <% end %>
