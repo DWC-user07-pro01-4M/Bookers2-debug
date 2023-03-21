@@ -25,25 +25,36 @@
             <% end %>
         </tr>
       </table>
-      <!--コメント投稿-->
-        <div>
-          <p>コメント数：<%= @book.book_comments.count %></p>
-             <% @book.book_comments.each do |book_comment| %>
-          <p><%= image_tag @book.user.get_profile_image, size:"100x100" %></p>
-              <%= @book_comment.comment %>
-              <!--コメント削除-->
-                <% if user_signed_in? && current_user.id == book_comment.user_id %>
-                  <%= link_to "Destroy", book_book_comment_path(@book, book_comment), method: :delete %>
-                <% end %>
-              <% end %>
-        </div>
-        <div>
-          <%= form_with model:[@book, @book_comment] do |f| %>
-            <%= f.text_area :comment, rows: '5' %>
-            <%= f.submit "送信" %>
-          <% end %>
-        </div>
-
+      <div class='col-md-8 offset-md-1'>
+       <table class='table'>
+         <!--コメント表示-->
+         コメント数：<%= @book.book_comments.count %>
+         <% @book.book_comments.each do |book_comment| %>
+           <tr>
+             <td>
+               <%= image_tag @book.user.get_profile_image, size:"100x100" %>
+             </td>
+             <td>
+               <%= book_comment.comment %>
+             </td>
+             <td>
+               <!--コメント削除-->
+               <% if user_signed_in? && current_user.id == book_comment.user_id %>
+                <%= link_to "Destroy", book_book_comment_path(@book, book_comment), method: :delete %>
+               <% end %>
+             </td>
+           </tr>
+         <% end %>
+        </table>
+           <!--コメント投稿-->
+          <div>
+            <%= form_with model:[@book, @book_comment] do |f| %>
+              <%= f.text_area :comment, rows: '5' %>
+              <dr>
+              <%= f.submit "送信" %>
+            <% end %>
+          </div>
+       </div>
     </div>
   </div>
 </div>
