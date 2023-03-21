@@ -31,6 +31,7 @@
                 <% end %>
               <% end %>
              </td>
+             <td>コメント数：<%= @book.book_comments.count %></td>
             <% if @book.user == current_user %>
               <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success" %></td>
               <td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger"%></td>
@@ -39,7 +40,6 @@
       </table>
        <table class='table'>
          <!--コメント表示-->
-         コメント数：<%= @book.book_comments.count %>
          <% @book.book_comments.each do |book_comment| %>
            <tr>
              <td>
