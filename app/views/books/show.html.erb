@@ -30,6 +30,9 @@
          コメント数：<%= @book.book_comments.count %>
          <% @book.book_comments.each do |book_comment| %>
            <tr>
+             <td>
+               <%= image_tag @book.user.get_profile_image, size:"100x100" %>
+             </td>
              <!--いいね-->
              <td>
                <% if @book.favorited_by?(current_user) %>
@@ -41,9 +44,6 @@
                   ♡<%= @book.favorites.count %>
                 <% end %>
               <% end %>
-             </td>
-             <td>
-               <%= image_tag @book.user.get_profile_image, size:"100x100" %>
              </td>
              <td>
                <%= book_comment.comment %>
