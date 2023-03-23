@@ -1,12 +1,9 @@
-
 <% if obj.errors.any? %>
-  <h3>
-    <%= obj.errors.count %>errors prohibited this obj from being saved:
-  </h3>
-  <div class="error-alert">
+  <div id="error_explanation">
+    <h3><%= pluralize(obj.errors.count, "error") %> prohibited this obj from being saved:</h3>
     <ul>
       <% obj.errors.full_messages.each do |message| %>
-        <li class='error-message'><%= message %></li>
+        <li><%= message %></li>
       <% end %>
     </ul>
   </div>
