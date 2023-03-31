@@ -1,5 +1,4 @@
 <% if users.exists? %>
-  <% users.each do |user| %>
     <table>
       <thead>
         <tr>
@@ -8,6 +7,7 @@
           <th></th>
         </tr>
       </thead>
+    <% users.each do |user| %>
       <tbody>
         <tr>
           <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
@@ -17,7 +17,7 @@
         </tr>
       </tbody>
     </table>
-  <% end %>
+    <% end %>
   <% else%>
     <p>ユーザーはいません</p>
 <% end %>
