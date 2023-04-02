@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "home/about" => "homes#about"
 
   # 検索機能
-  get "search" => "searches#search"
+  # get "search" => "searches#search"
+  get '/search', to: 'searches#search'
 
   resources :books, only: [:index, :create, :show, :edit, :update, :destroy,] do
     resource :favorites, only: [:create, :destroy]
