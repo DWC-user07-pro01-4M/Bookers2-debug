@@ -19,13 +19,12 @@ class UsersController < ApplicationController
     # 7日間の投稿数を取得
     # 空の配列を定義
     # 配列には投稿された本の数を１日ずつ追加
-    @this_week_book_count = []
+    @this_week_book_counts = []
     # downtoメソッドは初期値から１ずつ減らしながら引数の値になるまで処理
     # 6.downto(0) do |n| とすることで、nに6から0までの数字を入れながら順に処理
       6.downto(0) do |n|
-        @this_week_book_count.push(@books.where(created_at: n.day.ago.all_day).count)
+        @this_week_book_counts.push(@books.where(created_at: n.day.ago.all_day).count)
       end
-
   end
 
   def index
