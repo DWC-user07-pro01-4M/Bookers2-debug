@@ -16,6 +16,7 @@ import '@fortawesome/fontawesome-free/js/all';
 // Javascriptのライブラリ読み込み
 import "chartkick"
 import "Chart.bundle"
+import "chart.js"
 
 Rails.start()
 Turbolinks.start()

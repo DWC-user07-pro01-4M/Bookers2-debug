@@ -1,2 +1,3 @@
 <!--モデルbook.rbリファクタリングした過去 7 日間分、それぞれの投稿数を一覧表示-->
 data: <%= @books.past_week_count %>,
+<%= line_chart Book.group_by_day(:created_at).count, colors: ['#0000cd'] %>
