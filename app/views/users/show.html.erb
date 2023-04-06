@@ -9,7 +9,7 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
-<!--昨日と今日の投稿を表示-->
+<!--今日と昨日の投稿を表示-->
 <div class="table_width">
   <table class="table table-bordered">
     <thead>
@@ -19,7 +19,7 @@
         <th>前日比</th>
       </tr>
     </thead>
-    <!--昨日と今日の投稿のカウント-->
+    <!--今日と昨日の投稿のカウント-->
     <tbody>
       <tr>
         <td><%= @today_book.count %></td>
@@ -37,8 +37,34 @@
       </tr>
     </tbody>
   </table>
+<!--今週と先週の投稿を表示-->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>今週の投稿数</th>
+        <th>先週の投稿数</th>
+        <th>前週比</th>
+      </tr>
+    </thead>
+    <!--今週と先週の投稿のカウント-->
+    <tbody>
+      <tr>
+        <td><%= @this_week_book.count %></td>
+        <td><%= @last_week_book.count %></td>
+        <td>
+        <!--if文を使って条件分岐し、前日比　=　先週の投稿数÷今週の投稿数を定義-->
+          <% if @last_week_book.count == 0 %>
+            先週の投稿はありません
+          <% else %>
+            <% @the_week_before = @this_week_book.count / @last_week_book.count.to_f %>
+            <%= (@the_week_before * 100).round %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<!--ここまで昨日と今日の投稿を表示-->
+<!--ここまで今日・昨日・今週・先週の投稿を表示-->
     </div>
   </div>
 </div>

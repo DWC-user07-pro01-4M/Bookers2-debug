@@ -8,8 +8,14 @@ class UsersController < ApplicationController
     @book = Book.new
     # モデルbook.rbに記載した今日の投稿と機能の投稿のための記述
     # モデルで定めたスコープ名を使用
+    # 今日
     @today_book = @books.created_today
+    # 昨日
     @yesterday_book = @books.created_yesterday
+     # 今週
+    @this_week_book = @books.created_this_week
+     # 先週
+    @last_week_book = @books.created_last_week
   end
 
   def index
