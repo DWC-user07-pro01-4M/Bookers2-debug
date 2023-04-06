@@ -9,6 +9,36 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
+<!--昨日と今日の投稿を表示-->
+<div class="table_width">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>今日の投稿数</th>
+        <th>前日の投稿数</th>
+        <th>前日比</th>
+      </tr>
+    </thead>
+    <!--昨日と今日の投稿のカウント-->
+    <tbody>
+      <tr>
+        <td><%= @today_book.count %></td>
+        <td><%= @yesterday_book.count %></td>
+        <td>
+          <!--if文を使って条件分岐し、前日比　=　昨日の投稿数÷前日の投稿数を定義-->
+          <% if @yesterday_book.count == 0 %>
+            前日の投稿はありません
+          <% else %>
+            <!--to_fメソッドはオブジェクトの少数点までの数値も表示してくれるメソッド-->
+            <% @the_day_before = @today_book.count / @yesterday_book.count.to_f %>
+            <%= (@the_day_before * 100).round %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--ここまで昨日と今日の投稿を表示-->
     </div>
   </div>
 </div>
