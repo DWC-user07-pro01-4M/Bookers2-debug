@@ -12,7 +12,9 @@
       <!--現在・過去の投稿数の表示-->
       <%= render 'book_index', books: @books %>
       <!--過去７日間分のワンライングラフ表示-->
-      <%= render 'graph', books: @books %>
+      <canvas id="bookChart">
+        <%= render 'graph', books: @books %>
+      </canvas>
     </div>
   </div>
 </div>

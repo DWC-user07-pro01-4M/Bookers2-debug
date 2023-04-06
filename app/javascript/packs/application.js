@@ -14,9 +14,8 @@ import "bootstrap";
 import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all';
 // Javascriptのライブラリ読み込み
-import "chartkick"
-import "Chart.bundle"
-import "chart.js"
+import Chart from "chart.js/auto";
+global.Chart = Chart;
 
 Rails.start()
 Turbolinks.start()
