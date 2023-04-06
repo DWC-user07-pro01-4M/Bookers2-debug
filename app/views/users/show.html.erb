@@ -9,6 +9,7 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
+<h1>投稿数の前日比・前週比</h1>
 <!--今日と昨日の投稿を表示-->
 <div class="table_width">
   <table class="table table-bordered">
@@ -31,7 +32,7 @@
           <% else %>
             <!--to_fメソッドはオブジェクトの少数点までの数値も表示してくれるメソッド-->
             <% @the_day_before = @today_book.count / @yesterday_book.count.to_f %>
-            <%= (@the_day_before * 100).round %>
+            <%= (@the_day_before * 100).round %>%
           <% end %>
         </td>
       </tr>
@@ -57,7 +58,7 @@
             先週の投稿はありません
           <% else %>
             <% @the_week_before = @this_week_book.count / @last_week_book.count.to_f %>
-            <%= (@the_week_before * 100).round %>
+            <%= (@the_week_before * 100).round %>%
           <% end %>
         </td>
       </tr>
