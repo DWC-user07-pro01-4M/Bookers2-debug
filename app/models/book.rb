@@ -37,4 +37,5 @@ class Book < ApplicationRecord
   def self.past_week_count
     (1..7).map { |n| created_days_ago(n).count }.reverse
   end
+  
 end
