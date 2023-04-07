@@ -6,25 +6,29 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @books = @user.books
     @book = Book.new
-    # モデルbook.rbに記載した今日の投稿と機能の投稿のための記述
-    # モデルで定めたスコープ名を使用
-    # 今日
-    @today_book = @books.created_today
-    # 昨日
-    @yesterday_book = @books.created_yesterday
-     # 今週
-    @this_week_book = @books.created_this_week
-     # 先週
-    @last_week_book = @books.created_last_week
-    # 7日間の投稿数を取得
-    # 空の配列を定義
-    # 配列には投稿された本の数を１日ずつ追加
+
+    # 応用課題８Bここから
+    # 7日間の投稿数を取得・空の配列を定義・配列には投稿された本の数を１日ずつ追加
     @this_week_book_counts = []
     # downtoメソッドは初期値から１ずつ減らしながら引数の値になるまで処理
     # 6.downto(0) do |n| とすることで、nに6から0までの数字を入れながら順に処理
       6.downto(0) do |n|
         @this_week_book_counts.push(@books.where(created_at: n.day.ago.all_day).count)
       end
+    # 応用課題８Bここまで
+
+    # 応答課題７Bここから
+    # # モデルbook.rbに記載した今日の投稿と機能の投稿のための記述
+    # # モデルで定めたスコープ名を使用
+    # # 今日
+    # @today_book = @books.created_today
+    # # 昨日
+    # @yesterday_book = @books.created_yesterday
+    # # 今週
+    # @this_week_book = @books.created_this_week
+    # # 先週
+    # @last_week_book = @books.created_last_week
+    # 応答課題７Bここまで
   end
 
   def index

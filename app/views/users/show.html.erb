@@ -9,11 +9,15 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
-      <!--現在・過去の投稿数の表示-->
-      <%= render 'book_index', books: @books %>
-      <!--過去７日間分のワンライングラフ表示-->
-      <%= render 'week', books: @books %>
-      <canvas id="bookChart"></canvas>
+
+      <!--応用課題７Bで使用現在・過去の投稿数の表示・ここから-->
+        <!--<= render 'book_index', books: @books %>-->
+      <!--応用課題７Bで使用・ここまで-->
+
+      <!--応用課題８Bで使用過去７日間分のワンライングラフ表示・ここから-->
+        <%= render 'week', books: @books %>
+        <canvas id="bookChart"></canvas>
+      <!--応用課題８Bで使用・ここまで-->
     </div>
   </div>
 </div>
