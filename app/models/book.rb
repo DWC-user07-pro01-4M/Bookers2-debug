@@ -36,9 +36,11 @@ class Book < ApplicationRecord
   # scope :created_last_week, -> {where(created_at: 2.week.ago.beginning_of_day..1.week.ago.end_of_day)}
   # 応用課題７B・ここまで
 
+  # 応用課題８Bここから
   # 過去 7 日間分、それぞれの投稿数を一覧表示
   scope :created_days_ago, ->(n) { where(created_at: n.days.ago.all_day) }
   def self.past_week_count
     (1..6).map { |n| created_days_ago(n).count }.reverse
   end
+  # 応用課題８Bここまで
 end

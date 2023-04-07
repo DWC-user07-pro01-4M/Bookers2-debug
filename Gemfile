@@ -56,6 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 # gem "net-smtp"
 # gem 'jquery-rails'
-# グラフ表示に必要
-gem 'chartkick'
-gem 'groupdate'
+# グラフ表示に必要・なくても普通に機能した
+# gem 'chartkick'
+# gem 'groupdate'
