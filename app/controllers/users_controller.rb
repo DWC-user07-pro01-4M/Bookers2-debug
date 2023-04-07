@@ -7,15 +7,9 @@ class UsersController < ApplicationController
     @books = @user.books
     @book = Book.new
 
-    # 応用課題８Bここから
-    # 7日間の投稿数を取得・空の配列を定義・配列には投稿された本の数を１日ずつ追加
-    @this_week_book_counts = []
-    # downtoメソッドは初期値から１ずつ減らしながら引数の値になるまで処理
-    # 6.downto(0) do |n| とすることで、nに6から0までの数字を入れながら順に処理
-      6.downto(0) do |n|
-        @this_week_book_counts.push(@books.where(created_at: n.day.ago.all_day).count)
-      end
-    # 応用課題８Bここまで
+    # 応用課題９Bここから
+    
+    # 応用課題９Bここまで
 
     # 応答課題７Bここから
     # # モデルbook.rbに記載した今日の投稿と機能の投稿のための記述
@@ -29,6 +23,16 @@ class UsersController < ApplicationController
     # # 先週
     # @last_week_book = @books.created_last_week
     # 応答課題７Bここまで
+
+    # 応用課題８Bここから
+    # 7日間の投稿数を取得・空の配列を定義・配列には投稿された本の数を１日ずつ追加
+    # @this_week_book_counts = []
+    # # downtoメソッドは初期値から１ずつ減らしながら引数の値になるまで処理
+    # # 6.downto(0) do |n| とすることで、nに6から0までの数字を入れながら順に処理
+    #   6.downto(0) do |n|
+    #     @this_week_book_counts.push(@books.where(created_at: n.day.ago.all_day).count)
+    #   end
+    # 応用課題８Bここまで
   end
 
   def index
