@@ -16,7 +16,7 @@
 
       <!--応用課題８Bで使用過去７日間分のワンライングラフ表示・ここから-->
         <%= render 'week', books: @books %>
-        <canvas id="bookChart"></canvas>
+        <%= render 'graph', books: @books %>
       <!--応用課題８Bで使用・ここまで-->
     </div>
   </div>

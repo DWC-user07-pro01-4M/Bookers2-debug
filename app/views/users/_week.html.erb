@@ -1,3 +1,4 @@
+<!--応用課題８Bで使用-->
 <h3>７日間分の投稿数</h3>
   <div class="table_width">
     <table class="table table-bordered">
@@ -14,7 +15,13 @@
       </thead>
       <tbody>
         <tr>
-          <th></th>
+          <td><%= books.created_days_ago(6).count %></td>
+          <td><%= books.created_days_ago(5).count %></td>
+          <td><%= books.created_days_ago(4).count %></td>
+          <td><%= books.created_days_ago(3).count %></td>
+          <td><%= books.created_days_ago(2).count %></td>
+          <td><%= books.created_days_ago(1).count %></td>
+          <td><%= books.created_days_ago(0).count %></td>
         </tr>
       </tbody>
     </table>
