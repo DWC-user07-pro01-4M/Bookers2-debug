@@ -31,20 +31,27 @@ class UsersController < ApplicationController
     # 応用課題８Bここまで
   end
     # 応用課題９Bここから
-    def search
-      @user = User.find(params[:user_id])
-      @books = @user.books
-      @book = Book.new
-      # if文で分岐させて空欄なら日付を選択するように表示
-      if params[:created_at] == ""
-        @search_book = "日付を選択してください"
-      else
-        create_at = params[:created_at]
-        # .countメソッドで検索してヒットした本を投稿した日付の投稿数を@search_bookで定義
-        @search_book = @books.where(['created_at LIKE ? ', "#{create_at}%"]).count
-        render 'show'
+    # 私の記述
+    # def search
+    #   @user = User.find(params[:user_id])
+    #   @books = @user.books
+    #   @book = Book.new
+    #   # if文で分岐させて空欄なら日付を選択するように表示
+    #   if params[:created_at] == ""
+    #     @search_book = "日付を選択してください"
+    #   else
+    #     create_at = params[:created_at]
+    #     # .countメソッドで検索してヒットした本を投稿した日付の投稿数を@search_bookで定義
+    #     @search_book = @books.where(['created_at LIKE ? ', "#{create_at}%"]).count
+    #     render 'show'
+    #   end
+    # end
+    # 模範解答
+      def search
+        user = User.find(params[:user_id])
+        @books = user.books.where(created_at: params[:created_at].to_date.all_day)
+        render 'search'
       end
-    end
     # 応用課題９Bここまで
 
   def index
