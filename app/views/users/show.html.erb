@@ -18,6 +18,20 @@
         <!--<= render 'week', books: @books %>-->
         <!--<= render 'graph', books: @books %>-->
       <!--応用課題８Bで使用・ここまで-->
+
+      <!--応用課題９B・検索機能非同期通信・ここから-->
+      <%= form_with url: user_search_path(@user), method: :get do |f| %>
+        <%= f.date_field :created_at %>
+        <%= f.submit '検索', class: 'btn btn-primary'  %>
+      <% end %>
+
+      <div id="search_result">
+        <% if @search_book.present? %>
+          <%= render 'search', search_book: @search_book %>
+        <% end %>
+      </div>
+      <!--応用課題９B・ここまで-->
+
     </div>
   </div>
 </div>
