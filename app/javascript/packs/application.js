@@ -7,8 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-
-import "jquery";
+// import "jquery";
 import "popper.js";
 import "bootstrap";
 import "../stylesheets/application"
@@ -17,6 +16,7 @@ import '@fortawesome/fontawesome-free/js/all';
 import Chart from "chart.js/auto";
 global.Chart = Chart;
 //Raty 4系で実装
+require("jquery")
 window.$ = window.jQuery = require('jquery');
 require('packs/raty')
 
