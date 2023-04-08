@@ -16,6 +16,13 @@ import '@fortawesome/fontawesome-free/js/all';
 // Javascriptのライブラリ読み込み
 import Chart from "chart.js/auto";
 global.Chart = Chart;
+//Raty 4系で実装
+import Raty from "raty.js"
+window.raty = function(elem,opt) {
+  let raty =  new Raty(elem,opt)
+  raty.init();
+  return raty;
+}
 
 Rails.start()
 Turbolinks.start()
