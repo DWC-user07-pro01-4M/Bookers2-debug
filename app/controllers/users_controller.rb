@@ -47,11 +47,11 @@ class UsersController < ApplicationController
     #   end
     # end
     # 模範解答
-      def search
-        user = User.find(params[:user_id])
-        @books = user.books.where(created_at: params[:created_at].to_date.all_day)
-        render 'search'
-      end
+      # def search
+      #   user = User.find(params[:user_id])
+      #   @books = user.books.where(created_at: params[:created_at].to_date.all_day)
+      #   render 'search'
+      # end
     # 応用課題９Bここまで
 
   def index
