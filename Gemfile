@@ -54,7 +54,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
-# gem "net-smtp"
+gem "net-smtp"
 # gem 'jquery-rails'
 # グラフ表示に必要・なくても普通に機能した
 # gem 'chartkick'
