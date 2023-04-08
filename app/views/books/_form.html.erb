@@ -18,12 +18,12 @@
   </div>
   <script>
     $('#star').empty(); //ブラウザバックで星が増え続ける不具合を抑制
-    $('#star').raty({
+    new Raty(document.querySelector('#star'), {
       size :36,
       starOff: '<%= asset_path('star-off.png')%>',
       starOn: '<%= asset_path('star-on.png')%>',
       scoreName: 'book[star]', //bookモデルのstarカラムへ値を保存という意味
-      half: true, //半分評価をできるようにする記述、したくなければ「false」を指定
+      half: false, //半分評価可能にしたければ、データ型を「float」にして「true」を指定
     });
   </script>
 <!--応用課題７D・ここまで-->

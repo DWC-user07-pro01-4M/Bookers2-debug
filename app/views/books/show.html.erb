@@ -27,7 +27,20 @@
             <%= render "book_comments/counter", book: @book %>
           </td>
           <!--応用課題７Dで使用・星レビュー機能・ここから-->
-            <td><%= render "books/star" %></td>
+          <td>
+            <div id="star-rate<%= @book.id%>"></td>
+             <script>
+              $('#star-rate<%= @book.id %>').empty();
+              $('#star-rate<%= @book.id%>').raty({
+                 size      : 36,
+                 starOff   : '<%= asset_path('star-off.png') %>',
+                 starOn    : '<%= asset_path('star-on.png') %>',
+                 half      : false,
+                 readOnly: true,
+                 score: <%= @book.star %>,
+               });
+             </script>
+          </td>
           <!--応用課題７Dで使用・ここまで-->
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>
