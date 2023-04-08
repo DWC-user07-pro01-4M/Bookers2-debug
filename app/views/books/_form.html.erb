@@ -10,4 +10,22 @@
   <div class="form-group">
     <%= f.submit class: 'btn btn-success' %>
   </div>
+
+<!--応用課題７D・星レビュー機能・ここから-->
+  <div class="form-group row" id ="star">
+    <%= f.label :star,"評価", class: 'col-md-3 col-form-label' %>
+    <%= f.hidden_field :star, id: :review_star %>
+  </div>
+  <script>
+    $('#star').empty(); //ブラウザバックで星が増え続ける不具合を抑制
+    $('#star').raty({
+      size :36,
+      starOff: '<%= asset_path('star-off.png')%>',
+      starOn: '<%= asset_path('star-on.png')%>',
+      scoreName: 'book[star]', //bookモデルのstarカラムへ値を保存という意味
+      half: true, //半分評価をできるようにする記述、したくなければ「false」を指定
+    });
+  </script>
+<!--応用課題７D・ここまで-->
+
 <% end %>

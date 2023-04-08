@@ -26,6 +26,9 @@
           <td class="book_comments_counter">
             <%= render "book_comments/counter", book: @book %>
           </td>
+          <!--応用課題７Dで使用・星レビュー機能・ここから-->
+            <td><%= render "books/star" %></td>
+          <!--応用課題７Dで使用・ここまで-->
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>
             <td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{@book.id}" %></td>

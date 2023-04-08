@@ -20,6 +20,9 @@
         <td class=<%= "favorite-" + book.id.to_s %> >
           <%= render "favorites/btn", book: book %>
         </td>
+        <!--応用課題７Dで使用・星レビュー機能・ここから-->
+          <td><%= render "books/star" %></td>
+        <!--応用課題７Dで使用・ここまで-->
         <!--コメントのカウント数-->
         <td>
           <%= render "book_comments/counter", book: book %>
