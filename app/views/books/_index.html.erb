@@ -16,17 +16,10 @@
         </td>
         <td><%= link_to book.title,book, class: "book_#{book.id}" %></td>
         <td><%= book.body %></td>
-        <!--いいねボタン-->
         <td class=<%= "favorite-" + book.id.to_s %> >
-          <%= render "favorites/btn", book: book %>
+            <%= render "favorites/btn", book: book %>
         </td>
-        <!--応用課題７Dで使用・星レビュー機能・ここから-->
-
-        <!--応用課題７Dで使用・ここまで-->
-        <!--コメントのカウント数-->
-        <td>
-          <%= render "book_comments/counter", book: book %>
-        </td>
+        <td><%= render "book_comments/counter", book: book %></td>
       </tr>
     <% end %>
   </tbody>

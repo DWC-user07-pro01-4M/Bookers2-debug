@@ -8,14 +8,18 @@ class BooksController < ApplicationController
   end
 
   def index
-    to = Time.current.at_end_of_day
-    from = (to - 6.day).at_beginning_of_day
-    @books = Book.left_joins(:favorites)
-                 .select("books.*, COUNT(favorites.id) AS favorite_count")
-                 .where(favorites: { created_at: from..to })
-                 .group("books.id")
-                 .order("favorite_count DESC")
-    @book = Book.new
+    # 応用課題７Aのため記述変更「@books = Book.all」削除
+    to  = Time.current.at_end_of_day # 現在の時刻の終わりを表す
+    from  = (to - 6.day).at_beginning_of_day # to から6日前の始まりを表す
+    @books = Book.all.sort {|a,b| # すべての本を取得する Book.all に対し、 sort を用いて、以下の条件でソート
+    # b.favorites.where(created_at: from...to).size ：いいねが多い順に並ぶ
+    # favorites ： Book モデルで定義された、 has_many :favorites の関連付け
+    # where(created_at: from...to) ： from と to の期間内に作成された favorites のみを抽出
+      b.favorites.where(created_at: from...to).size <=>
+    # a.favorites.where(created_at: from...to).size ：少ない順に並ぶ
+      a.favorites.where(created_at: from...to).size
+    }
+    @book = Book.new # 新しい本の作成に使用される
   end
 
   def create
@@ -48,7 +52,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body, :star) #星評価を保存できるように追加
+    params.require(:book).permit(:title, :body)
   end
 
   def ensure_correct_user
