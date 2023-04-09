@@ -2,7 +2,9 @@ class Book < ApplicationRecord
   belongs_to :user
   has_many :book_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-
+  # 応用課題７A・本の投稿一覧ページで、過去一週間でいいねの合計カウントが多い順に投稿を表示・ここから
+  has_many :favorited_users, through: :favorites, source: :user
+  # 応用課題７A・ここまで
   validates :title,presence:true
   validates :body,presence:true,length:{maximum:200}
 
@@ -38,9 +40,9 @@ class Book < ApplicationRecord
 
   # 応用課題８Bここから
   # 過去 7 日間分、それぞれの投稿数を一覧表示
-  scope :created_days_ago, ->(n) { where(created_at: n.days.ago.all_day) }
-  def self.past_week_count
-    (1..6).map { |n| created_days_ago(n).count }.reverse
-  end
+  # scope :created_days_ago, ->(n) { where(created_at: n.days.ago.all_day) }
+  # def self.past_week_count
+  #   (1..6).map { |n| created_days_ago(n).count }.reverse
+  # end
   # 応用課題８Bここまで
 end

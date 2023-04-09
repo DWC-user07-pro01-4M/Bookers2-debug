@@ -12,10 +12,14 @@ import "jquery";
 import "popper.js";
 import "bootstrap";
 import "../stylesheets/application"
-import '@fortawesome/fontawesome-free/js/all';
+import '@fortawesome/fontawesome-free/js/all'
 // Javascriptのライブラリ読み込み
-import Chart from "chart.js/auto";
-global.Chart = Chart;
+// import Chart from "chart.js/auto";
+// global.Chart = Chart;
+
+// 応用課題７Dのために追加
+// window.$ = window.jQuery = require('jquery');
+// require('packs/raty')
 
 Rails.start()
 Turbolinks.start()
