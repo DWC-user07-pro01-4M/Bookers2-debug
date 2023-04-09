@@ -44,9 +44,9 @@ class User < ApplicationRecord
       User.where('name LIKE ?', '%' + content + '%')
     end
   end
-  # 応用課題８Aここから
+  # 応用課題８A・ここから
     has_many :user_rooms
     has_many :chats
     has_many :rooms, through: :user_rooms
-  # ここまで
+  # 応用課題８A・ここまで
 end
