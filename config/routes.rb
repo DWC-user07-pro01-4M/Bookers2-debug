@@ -14,15 +14,14 @@ Rails.application.routes.draw do
     resource :relationships, only: [:create, :destroy]
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
-
-    # 応用課題８A・ここから
-      resources :chats, only: [:show, :create]
-    # 応用課題８A・ここまで
-
     # 応用課題９B・ユーザーの詳細ページに検索欄を表示させたいので、ネストさせる・ここから
     # get 'search', to: 'users#search'#私の記述
     # 応用課題９B・ここまで
   end
+
+  # 応用課題８A・ここから
+  resources :chats, only: [:show, :create]
+  # 応用課題８A・ここまで
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
