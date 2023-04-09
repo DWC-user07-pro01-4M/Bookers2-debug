@@ -22,10 +22,14 @@
             <%= render "favorites/btn", book: @book %>
           </td>
           <!--コメントのカウント数-->
-          <!--部分テンプレート化-->
           <td class="book_comments_counter">
             <%= render "book_comments/counter", book: @book %>
           </td>
+
+          <!--応用課題９A・ここから-->
+          <td><%= render "books/read_counts", book: @book %></td>
+          <!--応用課題９A・ここまで-->
+
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>
             <td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{@book.id}" %></td>
