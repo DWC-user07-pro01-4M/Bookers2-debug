@@ -19,6 +19,10 @@ class Book < ApplicationRecord
   has_many :week_favorites, -> { where(created_at: ((Time.current.at_end_of_day - 6.day).at_beginning_of_day)..(Time.current.at_end_of_day)) }, class_name: 'Favorite'
   # 応用課題７A・ここまで
 
+  # 応用課題９A・ここから
+  has_many :read_counts, dependent: :destroy
+  # 応用課題９A・ここまで
+
   validates :title,presence:true
   validates :body,presence:true,length:{maximum:200}
 

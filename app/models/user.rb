@@ -49,4 +49,7 @@ class User < ApplicationRecord
     has_many :chats
     has_many :rooms, through: :user_rooms
   # 応用課題８A・ここまで
+  # 応用課題９A・ここから
+    has_many :read_counts, dependent: :destroy
+  # 応用課題９A・ここまで
 end
