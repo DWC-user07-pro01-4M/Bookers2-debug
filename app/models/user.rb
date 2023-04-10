@@ -45,12 +45,17 @@ class User < ApplicationRecord
     end
   end
   # 応用課題８A・ここから
-    has_many :user_rooms
-    has_many :chats
-    has_many :rooms, through: :user_rooms
+    # has_many :user_rooms
+    # has_many :chats
+    # has_many :rooms, through: :user_rooms
   # 応用課題８A・ここまで
 
   # 応用課題９A・ここから
-    has_many :read_counts, dependent: :destroy
+    # has_many :read_counts, dependent: :destroy
   # 応用課題９A・ここまで
+
+  # 応用課題７C８C９C・ここから
+  has_many :group_users
+  has_many :groups, through: :group_users
+  # 応用課題７C８C９C・ここまで
 end
