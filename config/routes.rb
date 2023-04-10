@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'groups/new'
-  get 'groups/index'
-  get 'groups/show'
-  get 'groups/edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
   root to: "homes#top"
@@ -24,8 +20,13 @@ Rails.application.routes.draw do
   end
 
   # 応用課題８A・ここから
-  resources :chats, only: [:show, :create]
+  # resources :chats, only: [:show, :create]
   # 応用課題８A・ここまで
+
+  # 応用課題７C８C９Cここから
+  resources :groups, only: [:new, :index, :show, :edit, :create, :update, :destroy]
+  # resources :groups, except: [:destroy] #省略形
+  # 応用課題７C８C９Cここまで
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
