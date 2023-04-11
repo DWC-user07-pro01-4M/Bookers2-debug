@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   # 応用課題８A・ここまで
 
   # 応用課題７C８C９Cここから
-  resources :groups, only: [:new, :index, :show, :edit, :create, :update, :destroy]
-  # resources :groups, except: [:destroy] #省略形
+  # resources :groups, only: [:new, :index, :show, :edit, :create, :update, :destroy]
+  resources :groups, except: [:destroy] #省略形
   # 応用課題７C８C９Cここまで
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
