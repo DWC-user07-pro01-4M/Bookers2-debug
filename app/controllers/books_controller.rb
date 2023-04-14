@@ -5,9 +5,9 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     # 応用課題９A・ここから
-      unless ReadCount.find_by(user_id: current_user.id, book_id: @book.id)
-        current_user.read_counts.create(book_id: @book.id)
-      end
+      # unless ReadCount.find_by(user_id: current_user.id, book_id: @book.id)
+      #   current_user.read_counts.create(book_id: @book.id)
+      # end
     # 応用課題９A・ここまで
     @book_comment = BookComment.new
   end
@@ -57,7 +57,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body)
+    params.require(:book).permit(:title, :body, :star)
   end
 
   def ensure_correct_user
