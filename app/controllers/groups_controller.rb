@@ -62,7 +62,7 @@ class GroupsController < ApplicationController
   # end
   # 応用課題８Cから追加ここまで
 
-   private
+  private
 
   def group_params
     params.require(:group).permit(:name, :introduction, :image)
