@@ -56,6 +56,6 @@ class User < ApplicationRecord
 
   # 応用課題７C８C９C・ここから
   has_many :group_users, dependent: :destroy
-  has_many :groups, through: :group_users
+  # has_many :groups, through: :group_users 模範回答にはなし
   # 応用課題７C８C９C・ここまで
 end

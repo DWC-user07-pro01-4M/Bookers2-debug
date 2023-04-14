@@ -26,8 +26,12 @@ Rails.application.routes.draw do
   # 応用課題７C８C９Cここから
   # resources :groups, only: [:new, :index, :show, :edit, :create, :update, :destroy]
   # resources :groups, except: [:destroy] #省略形
-  resources :groups do
-    get "join" => "groups#join"
+  # resources :groups do
+  #   get "join" => "groups#join"
+  # end
+  # 模範回答
+   resources :groups, only: [:new, :index, :show, :create, :edit, :update] do
+    resource :group_users, only: [:create, :destroy]
   end
   # 応用課題７C８C９Cここまで
 

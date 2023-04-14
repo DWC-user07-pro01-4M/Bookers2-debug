@@ -18,11 +18,12 @@ class GroupsController < ApplicationController
   end
 
   # 応用課題８Cから追加ここから
-  def join
-    @group = Group.find(params[:group_id])
-    @group.users << current_user
-    redirect_to groups_path
-  end
+  # 模範回答にはなし
+  # def join
+  #   @group = Group.find(params[:group_id])
+  #   @group.users << current_user
+  #   redirect_to groups_path
+  # end
   # 応用課題８Cから追加ここまで
 
   def create
@@ -30,7 +31,8 @@ class GroupsController < ApplicationController
     @group.owner_id = current_user.id
 
     # 応用課題８Cから追加ここから
-    @group.users << current_user
+    # 模範回答にはなし
+    # @group.users << current_user
     # 応用課題８Cから追加ここまで
 
     if @group.save
@@ -52,11 +54,12 @@ class GroupsController < ApplicationController
   end
 
   # 応用課題８Cから追加ここから
-  def destroy
-    @group = Group.find(params[:id])
-    @group.users.delete(current_user)
-    redirect_to groups_path
-  end
+  # 模範回答にはなし
+  # def destroy
+  #   @group = Group.find(params[:id])
+  #   @group.users.delete(current_user)
+  #   redirect_to groups_path
+  # end
   # 応用課題８Cから追加ここまで
 
    private
