@@ -14,7 +14,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @book = Book.new
+
     # 応用課題７Aのため記述変更「@books = Book.all」削除
     # to  = Time.current.at_end_of_day # 現在の時刻の終わりを表す
     # from  = (to - 6.day).at_beginning_of_day # to から6日前の始まりを表す
