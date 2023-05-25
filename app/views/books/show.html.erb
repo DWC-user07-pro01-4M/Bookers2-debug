@@ -17,14 +17,16 @@
           </td>
           <td><%= link_to @book.title, @book %></td>
           <td><%= @book.body %></td>
-          <!--いいねボタン-->
+
           <td class=<%= "favorite-" + @book.id.to_s %> >
             <%= render "favorites/btn", book: @book %>
           </td>
-          <!--コメントのカウント数-->
+
           <td class="book_comments_counter">
             <%= render "book_comments/counter", book: @book %>
           </td>
+
+          <!--レビュー機能-->
           <td><%= render "static_rate", book: @book %></td>
 
           <% if @book.user == current_user %>
@@ -33,7 +35,7 @@
           <% end %>
         </tr>
       </table>
-      <!--投稿したコメントをJsファイルで呼び出す-->
+
       <div class="book-comments-index">
         <%= render "book_comments/index", book: @book %>
       </div>
