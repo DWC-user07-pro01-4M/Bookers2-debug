@@ -72,24 +72,37 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # config.hosts << "a8c9cb2b77b24968bf1f0967084f4a3f.vfs.cloud9.us-east-1.amazonaws.com"
   # config.hosts << "49e69874be6d4ef3a0718e9b15430b98.vfs.cloud9.us-east-1.amazonaws.com"
+  config.hosts.clear
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  config.hosts.clear
-  config.active_job.queue_adapter = :inline
 
-  # 応用課題C9のために追記
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.raise_delivery_errors = true
+
+  # 応用課題C9ここから
+  # 私の記述
+  # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :user_name => ENV['KEY'],
+  #     :password => ENV['SECRET_KEY'],
+  #     :domain => "gmail.com",
+  #     :address => "smtp.gmail.com",
+  #     :port => 587,
+  #     :authentication => :plain,
+  #     :enable_starttls_auto => true
+  # }
+  # 模範解答
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :user_name => ENV['KEY'],
-      :password => ENV['SECRET_KEY'],
-      :domain => "gmail.com",
-      :address => "smtp.gmail.com",
-      :port => 587,
-      :authentication => :plain,
-      :enable_starttls_auto => true
+    address:              'smtp.gmail.com',
+    port:                  587,
+    domain:               'gmail.com',
+    user_name:            ENV['KEY'],
+    password:             ENV['SECRET_KEY'],
+    authentication:       'plain',
+    enable_starttls_auto:  true
   }
+  # 応用課題C9ここまで
 
 end
