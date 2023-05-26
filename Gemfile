@@ -57,3 +57,4 @@ gem 'devise'
 
 # 応用課題９Cのために導入
 gem 'dotenv-rails'
+gem 'net-smtp'
