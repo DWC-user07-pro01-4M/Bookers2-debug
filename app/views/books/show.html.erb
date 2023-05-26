@@ -17,18 +17,17 @@
           </td>
           <td><%= link_to @book.title, @book %></td>
           <td><%= @book.body %></td>
-          <!--いいねボタン-->
+
           <td class=<%= "favorite-" + @book.id.to_s %> >
             <%= render "favorites/btn", book: @book %>
           </td>
-          <!--コメントのカウント数-->
+
           <td class="book_comments_counter">
             <%= render "book_comments/counter", book: @book %>
           </td>
+
+          <!--レビュー機能-->
           <td><%= render "static_rate", book: @book %></td>
-          <!--応用課題９A・ここから-->
-          <!--<td><= render "books/read_count", book: @book %></td>-->
-          <!--応用課題９A・ここまで-->
 
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>
@@ -36,7 +35,7 @@
           <% end %>
         </tr>
       </table>
-      <!--投稿したコメントをJsファイルで呼び出す-->
+
       <div class="book-comments-index">
         <%= render "book_comments/index", book: @book %>
       </div>

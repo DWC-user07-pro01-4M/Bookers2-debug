@@ -4,11 +4,11 @@
 <!--    $('#star-rate<= @book.id %>').empty();-->
 <!--    $('#star-rate<= @book.id%>').raty({-->
 <!--      size      : 36,-->
-<!--      starOff   : '<= asset_path('star-off.png') %>',-->
-<!--      starOn    : '<= asset_path('star-on.png') %>',-->
+<!--      starOff   : '<#%= asset_path('star-off.png') %>',-->
+<!--      starOn    : '<#%= asset_path('star-on.png') %>',-->
 <!--      half      : false,-->
 <!--      readOnly: true,-->
-<!--      score: <= @book.star %>,-->
+<!--      score: <= @book.rate %>,-->
 <!--    });-->
 <!--  </script>-->
 
@@ -24,7 +24,7 @@ $(document).on('turbolinks:load', function() {
     starOn: "<%= asset_path('star-on.png') %>",
     starOff: "<%= asset_path('star-off.png') %>",
     starHalf: "<%= asset_path('star-half.png') %>",
-    score: "<%= book.star %>",
+    score: "<%= book.rate %>",
     readOnly: true,
   };
   raty(elem, opt);
