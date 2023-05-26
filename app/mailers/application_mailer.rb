@@ -1,4 +1,9 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV["KEY"]
+  # 私の記述
+  # default from: ENV["KEY"]
+  # layout 'mailer'
+
+  # 模範解答
+  default from: 'from@example.com'
   layout 'mailer'
 end
