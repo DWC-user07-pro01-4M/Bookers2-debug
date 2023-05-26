@@ -14,14 +14,7 @@ Rails.application.routes.draw do
     resource :relationships, only: [:create, :destroy]
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
-    # 応用課題９B・ユーザーの詳細ページに検索欄を表示させたいので、ネストさせる・ここから
-    # get 'search', to: 'users#search'#私の記述
-    # 応用課題９B・ここまで
   end
-
-  # 応用課題８A・ここから
-  # resources :chats, only: [:show, :create]
-  # 応用課題８A・ここまで
 
   # 応用課題７C８C９Cここから
   # resources :groups, only: [:new, :index, :show, :edit, :create, :update, :destroy]
@@ -32,6 +25,8 @@ Rails.application.routes.draw do
   # 模範回答
    resources :groups, only: [:new, :index, :show, :create, :edit, :update] do
     resource :group_users, only: [:create, :destroy]
+    get "new/mail" => "groups#new_mail"
+    get "send/mail" => "groups#send_mail"
   end
   # 応用課題７C８C９Cここまで
 
