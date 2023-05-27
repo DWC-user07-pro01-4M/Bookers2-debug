@@ -1,70 +1,82 @@
 <!--モデルbook.rb過去 7 日間分、それぞれの投稿数を一覧表示-->
-<!--<canvas id="bookChart"></canvas>-->
-<!--<script>-->
-<!--  const ctx = document.getElementById('bookChart');-->
+<div id="chartContainer"><canvas id="bookChart"></canvas></div>
+<script>
+  (() => {
+    // EM: レビューへの引き継ぎ(Turbolinks無効化の代わり, 模範解答がchart.jsに対してTurbolinks前提になっていた)
+    if(window.hasOwnProperty('bookers_users_graph')) {
+      const container = document.getElementById("chartContainer")
+      const chart = document.getElementById("bookChart")
+      container.removeChild(chart)
+      const cnvs = document.createElement('canvas')
+      cnvs.id = 'bookChart'
+      container.appendChild(cnvs)
+    }
 
-<!--  new Chart(ctx, {-->
-<!--    type: 'line',-->
-<!--    data: {-->
-<!--      labels: ['6日前', '5日前', '4日前', '3日前', '2日前', '1日前', '今日'],-->
-<!--      datasets: [{-->
-<!--        label: '投稿した本の数',-->
-<!--        data: <= @this_week_book_counts %>,-->
-<!--        borderColor: 'blue',-->
-<!--      }]-->
-<!--    },-->
-<!--    options: {-->
-<!--      plugins: {-->
-<!--        title: {-->
-<!--          display: true,-->
-<!--          text: '７日間の本の投稿数'-->
-<!--        }-->
-<!--      },-->
-<!--      y: {-->
-<!--        min: 0,-->
-<!--        max: 10,-->
-<!--      },-->
-<!--    },-->
-<!--  });-->
-<!--</script>-->
+    const ctx = document.getElementById('bookChart');
+    window.bookers_users_graph = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['6日前', '5日前', '4日前', '3日前', '2日前', '1日前', '今日'],
+        datasets: [{
+          label: '投稿した本の数',
+          data: <%= @this_week_book_counts %>,
+          borderColor: 'blue',
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: '７日間の本の投稿数'
+          }
+        },
+        y: {
+          min: 0,
+          max: 10,
+        },
+      },
+    });
+
+  })()
+</script>
 
 <!--以下模範解答-->
-  <!--<canvas id="myLineChart"></canvas>-->
-  <!--<script>-->
-  <!--  $(document).on('turbolinks:load', function() {-->
-  <!--    var ctx = document.getElementById("myLineChart");-->
-  <!--    var myLineChart = new Chart(ctx, {-->
-  <!--      type: 'line',-->
-  <!--      data: {-->
-  <!--        labels: ['6日前', '5日前', '4日前', '3日前', '2日前', '1日前', '今日'],-->
-  <!--        datasets: [-->
-  <!--          {-->
-  <!--            label: '投稿した本の数',-->
-  <!--            data: [-->
-  <!--              <= @this_week_book_counts %>,-->
-  <!--            ],-->
-  <!--            borderColor: "rgba(0,0,255,1)",-->
-  <!--            backgroundColor: "rgba(0,0,0,0)",-->
-  <!--            tension: 0.4-->
-  <!--          }-->
-  <!--        ],-->
-  <!--      },-->
-  <!--      options: {-->
-  <!--        title: {-->
-  <!--          display: true,-->
-  <!--          text: '7日間の投稿数の比較'-->
-  <!--        },-->
-  <!--        responsive: true,-->
-  <!--        scales: {-->
-  <!--          y:{-->
-  <!--            suggestedMin: 0,-->
-  <!--            suggestedMax: 10-->
-  <!--          },-->
-  <!--          x:{-->
-  <!--            stacked: true-->
-  <!--          },-->
-  <!--        },-->
-  <!--      }-->
-  <!--    });-->
-  <!--  });-->
-  <!--</script>-->
+<!--<canvas id="myLineChart"></canvas>-->
+<!--  <script>-->
+<!--    $(document).on('turbolinks:load', function() {-->
+<!--      var ctx = document.getElementById("myLineChart");-->
+<!--      var myLineChart = new Chart(ctx, {-->
+<!--        type: 'line',-->
+<!--        data: {-->
+<!--          labels: ['6日前', '5日前', '4日前', '3日前', '2日前', '1日前', '今日'],-->
+<!--          datasets: [-->
+<!--            {-->
+<!--              label: '投稿した本の数',-->
+<!--              data: [-->
+<!--                <#%= @this_week_book_counts %>,-->
+<!--              ],-->
+<!--              borderColor: "rgba(0,0,255,1)",-->
+<!--              backgroundColor: "rgba(0,0,0,0)",-->
+<!--              tension: 0.4-->
+<!--            }-->
+<!--          ],-->
+<!--        },-->
+<!--        options: {-->
+<!--          title: {-->
+<!--            display: true,-->
+<!--            text: '7日間の投稿数の比較'-->
+<!--          },-->
+<!--          responsive: true,-->
+<!--          scales: {-->
+<!--            y:{-->
+<!--              suggestedMin: 0,-->
+<!--              suggestedMax: 10-->
+<!--            },-->
+<!--            x:{-->
+<!--              stacked: true-->
+<!--            },-->
+<!--          },-->
+<!--        }-->
+<!--      });-->
+<!--    });-->
+<!--  </script>-->
