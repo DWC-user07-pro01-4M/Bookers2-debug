@@ -8,15 +8,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    # 応用課題D８ここから
-    if params[:latest]
-      @books = Book.latest
-    elsif params[:star_count]
-      @books = Book.star_count
-    else
-      @books = Book.all
-    end
-    # 応用課題D８ここまで
+    @books = Book.all
     @book = Book.new
   end
 
@@ -50,7 +42,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body, :rate)
+    params.require(:book).permit(:title, :body, :rate, :tag)
   end
 
   def ensure_correct_user
