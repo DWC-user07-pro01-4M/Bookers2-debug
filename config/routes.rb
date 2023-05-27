@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   get '/search', to: 'searches#search'
 
   # 応用課題D9から追加
-  get '/tag_search', to: 'tags#search'
+  get '/tag_search', to: 'tag_searches#search'
 end
