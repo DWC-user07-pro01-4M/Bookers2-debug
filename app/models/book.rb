@@ -7,8 +7,7 @@ class Book < ApplicationRecord
   validates :body,presence:true,length:{maximum:200}
 
   # 応用課題D８から追加ここから
-  scope :latest, -> {order(create_at: :desc)}
-  scope :old, -> {order(created_at: :asc)}
+  scope :latest, -> {order(created_at: :desc)}
   scope :star_count, -> {order(rate: :desc)}
   # 応用課題D８から追加ここまで
 

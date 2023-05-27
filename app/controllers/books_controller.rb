@@ -11,8 +11,6 @@ class BooksController < ApplicationController
     # 応用課題D８ここから
     if params[:latest]
       @books = Book.latest
-    elsif params[:old]
-      @books = Book.old
     elsif params[:star_count]
       @books = Book.star_count
     else
