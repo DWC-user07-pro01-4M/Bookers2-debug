@@ -8,6 +8,7 @@ class Book < ApplicationRecord
 
   # 応用課題D８から追加ここから
   scope :latest, -> {order(create_at: :desc)}
+  scope :old, -> {order(created_at: :asc)}
   scope :star_count, -> {order(rate: :desc)}
   # 応用課題D８から追加ここまで
 
