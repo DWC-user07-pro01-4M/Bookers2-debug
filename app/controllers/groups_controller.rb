@@ -38,7 +38,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -61,6 +61,21 @@ class GroupsController < ApplicationController
   #   redirect_to groups_path
   # end
   # 応用課題８Cから追加ここまで
+
+  # 応用課題９Cから追加ここから
+  # 模範回答にはなし
+  # def new_mail
+  #   @group = Group.find(params[:group_id])
+  # end
+
+  # def send_mail
+  #   @group = Group.find(params[:group_id])
+  #   group_users = @group.users
+  #   @mail_title = params[:mail_title]
+  #   @mail_content = params[:mail_content]
+  #   ContactMailer.send_mail(@mail_title, @mail_content, group_users).deliver
+  # end
+  # 応用課題９Cから追加ここまで
 
   private
 
