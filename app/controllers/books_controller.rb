@@ -8,7 +8,15 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    # 応用課題D８ここから
+    if params[:latest]
+      @books = Book.latest
+    elsif params[:star_count]
+      @books = Book.star_count
+    else
+      @books = Book.all
+    end
+    # 応用課題D８ここまで
     @book = Book.new
   end
 
