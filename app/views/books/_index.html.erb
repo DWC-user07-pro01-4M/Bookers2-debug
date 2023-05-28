@@ -20,10 +20,11 @@
             <%= render "favorites/btn", book: book %>
         </td>
         <td><%= render "book_comments/counter", book: book %></td>
-        <td><%= render "books/static_rate", book: book %></td>
+
         <!--応用課題９A・ここから-->
-        <!--<td><= render "books/read_count", book: book %></td>-->
+        <td><%= render "books/read_count", book: book %></td>
         <!--応用課題９A・ここまで-->
+
       </tr>
     <% end %>
   </tbody>
