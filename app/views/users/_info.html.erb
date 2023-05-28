@@ -1,5 +1,5 @@
-<table class='table'>
-  <tr><%= image_tag user.get_profile_image, size:'100x100' %></tr>
+<table class="table">
+  <tr><%= image_tag user.get_profile_image, size:"100x100" %></tr>
   <tr>
 	  <th>name</th>
 	  <th><%= user.name %></th>
@@ -19,7 +19,7 @@
     <th><%= link_to user.followers.count, user_followers_path(user) %></th>
   </tr>
 </table>
-<div class='row'>
+<div class="row">
   <%if current_user != user %>
     <td><%= render "/relationships/btn", user: user %></td>
   <% else %>
@@ -27,9 +27,4 @@
       <i class="fas fa-user-cog"></i>
     <% end %>
   <% end %>
-  <!--応用課題８A・ここから-->
-    <!--< if current_user != user && current_user.following?(user) && user.following?(current_user) %>-->
-    <!--  <= link_to 'chatを始める', chat_path(user.id), class: "ml-3" %>-->
-    <!--< end %>-->
-  <!--応用課題８A・ここまで-->
 </div>

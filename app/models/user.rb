@@ -1,8 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   has_many :books
   has_many :book_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -14,7 +16,9 @@ class User < ApplicationRecord
   has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   # 与フォロー関係を通じて参照→自分がフォローしている人
   has_many :followings, through: :relationships, source: :followed
+
   has_one_attached :profile_image
+
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
   def get_profile_image
@@ -44,18 +48,5 @@ class User < ApplicationRecord
       User.where('name LIKE ?', '%' + content + '%')
     end
   end
-  # 応用課題８A・ここから
-    # has_many :user_rooms
-    # has_many :chats
-    # has_many :rooms, through: :user_rooms
-  # 応用課題８A・ここまで
 
-  # 応用課題９A・ここから
-    # has_many :read_counts, dependent: :destroy
-  # 応用課題９A・ここまで
-
-  # 応用課題７C８C９C・ここから
-  has_many :group_users, dependent: :destroy
-  # has_many :groups, through: :group_users 模範回答にはなし
-  # 応用課題７C８C９C・ここまで
 end
