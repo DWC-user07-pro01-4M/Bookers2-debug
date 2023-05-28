@@ -21,19 +21,19 @@
 
       <!--応用課題９B・検索機能非同期通信・ここから-->
       <!--私の記述-->
-      <%= form_with url: user_search_path(@user), method: :get do |f| %>
-        <%= f.date_field :created_at %>
-        <%= f.submit '検索', class: 'btn btn-primary'  %>
-      <% end %>
+      <!--<#%= form_with url: user_search_path(@user), method: :get do |f| %>-->
+      <!--  <#%= f.date_field :created_at %>-->
+      <!--  <#%= f.submit '検索', class: 'btn btn-primary'  %>-->
+      <!--<#% end %>-->
 
-      <div id="search_result">
-        <% if @search_book.present? %>
-          <%= render 'search', search_book: @search_book %>
-        <% end %>
-      </div>
+      <!--<div id="search_result">-->
+      <!--  <#% if @search_book.present? %>-->
+      <!--    <#%= render 'search', search_book: @search_book %>-->
+      <!--  <#% end %>-->
+      <!--</div>-->
 
       <!--模範解答-->
-        <!--<#%= render 'search', user: @user %>-->
+        <%= render 'search', user: @user %>
       <!--応用課題９B・ここまで-->
 
     </div>

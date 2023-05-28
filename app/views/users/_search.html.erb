@@ -1,29 +1,29 @@
 <!--応用課題９B・私の記述-->
-<h4>検索結果</h4>
-  <table class='table table-bordered'>
-    <thead>
-      <tr>
-        <th>投稿数</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= search_book %></td>
-      </tr>
-    </tbody>
-  </table>
+<!--<h4>検索結果</h4>-->
+<!--  <table class='table table-bordered'>-->
+<!--    <thead>-->
+<!--      <tr>-->
+<!--        <th>投稿数</th>-->
+<!--      </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      <tr>-->
+<!--        <td><#%= search_book %></td>-->
+<!--      </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
 
 <!--模範解答-->
-<!--<div class="my-3">-->
-<!--  <#%= form_with url: user_search_path(user), method: :get, class: "row justify-content-center", local: false do |f| %>-->
-<!--    <div class="col-auto">-->
-<!--      <#%= f.date_field :created_at, class: "form-control" %>-->
-<!--    </div>-->
-<!--    <div class="col-auto">-->
-<!--      <#%= f.submit "検索" , class: "btn btn-primary"%>-->
-<!--    </div>-->
-<!--  <#% end %>-->
-<!--</div>-->
+<div class="my-3">
+  <%= form_with url: user_search_path(user), method: :get, class: "row justify-content-center", local: false do |f| %>
+    <div class="col-auto">
+      <%= f.date_field :created_at, class: "form-control" %>
+    </div>
+    <div class="col-auto">
+      <%= f.submit "検索" , class: "btn btn-primary"%>
+    </div>
+  <% end %>
+</div>
 
-<!--<div class="search_table">-->
-<!--</div>-->
+<div class="search_table">
+</div>
