@@ -1,24 +1,27 @@
-# README
+# 課題A-7/8/9【レビューサービスの機能を学ぼう】
+## 課題A７
+|要件|
+|:----|
+| 本の投稿一覧ページで、過去一週間でいいねの合計カウントが多い順に投稿を表示。|
+|<br>|
+![A-7](https://user-images.githubusercontent.com/124852092/242305489-b868f90a-10fd-4a5d-8738-3617ddb57ee3.gif)
+|<br>|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 課題A８
+|要件|
+|:----|
+| ユーザ同士で 1 対 1 の DM ができるようにする<br>
+※ 140 字まで送信可能にする。|
+| 相互フォローしている人限定で DM 機能を使えるようにする。|
+|<br>|
+![A-8](https://user-images.githubusercontent.com/124852092/242305482-fade615d-5366-40ce-990b-3a6c86145f7e.gif)
+|<br>|
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 課題A９
+|要件|
+|:----|
+| ページの閲覧数をカウントし、投稿一覧、投稿詳細に表示させる<br>
+※ 閲覧数は、各投稿へアクセスした数を集計。|
+|<br>|
+![A-9](https://user-images.githubusercontent.com/124852092/242305465-92dca967-77e3-48c0-8368-14b9f0d6805e.gif)
+|<br>|

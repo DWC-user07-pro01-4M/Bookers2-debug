@@ -1,5 +1,6 @@
 <!--応用課題８Aで使用-->
-<h1 id="room" data-room="<= @room.id %>" data-user="<= current_user.id %>">
+<div class="container justify-content-center">
+<h1 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>">
 <%= @user.name %> さんとのチャット</h1>
 
 <div class="message" style="width: 400px;">
@@ -20,3 +21,4 @@
   <%= f.text_field :message %>
   <%= f.hidden_field :room_id %>
 <% end %>
+</div>
