@@ -1,24 +1,37 @@
-# README
+# 課題C-7/8/9【コミュニティアプリの機能を学ぼう】
+## 課題C７
+|要件|
+|:----|
+| グループを作成する。|
+| ユーザーの一覧画面に group を作成するボタンを作る。|
+| グループを作成する機能の実装。|
+| 作成した人がグループオーナーになる。|
+| グループ一覧画面を作成、自分がグループオーナーの場合は、Edit リンクを出す。|
+| ユーザーの一覧画面に group 一覧のボタンを作る。|
+| グループ編集機能を作成。|
+| グループオーナーだけ編集可能にする。|
+| グループ詳細画面の作成。|
+|<br>|
+![C-7]()
+|<br>|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 課題C８
+|要件|
+|:----|
+| 自分がグループオーナーでない場合は、グループ詳細画面に「Join this group」ボタンを表示させる。|
+| 「Join this group」ボタンをクリックすると、グループに参加。<br>
+グループ一覧画面にメンバーの人数とグループ詳細画面のリストに参加したユーザとして表示される。|
+| 参加中のグループの場合は「Leave this group」でグループから抜けられる。|
+|<br>|
+![C-8]()
+|<br>|
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 課題C９
+|要件|
+|:----|
+| グループオーナーのみグループ詳細ページに「Notice an Event」リンクを表示させる。|
+| タイトル・本文を入力後、送信ボタンをクリックすると、グループメンバーにメールが送信される。|
+| その後、「送信が完了しました」と表示しその下に内容が表示される。|
+|<br>|
+![C-9]()
+|<br>|
