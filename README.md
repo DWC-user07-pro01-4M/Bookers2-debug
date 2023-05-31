@@ -20,4 +20,4 @@
     <td> 一度評価をつけたら変えられない。 </td>
   </tr>
 </table>
-https://github.com/DWC-user07-pro01-4M/Bookers2-debug.wiki.git
+https://raw.github.com/wiki/DWC-user07-pro01-4M/Bookers2-debug/app/assets/images/Gif-D-7.gif
