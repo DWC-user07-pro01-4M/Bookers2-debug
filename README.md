@@ -1,11 +1,11 @@
-# こちらは以下の５つのブランチがあります。
-- main
-    - develop_A
-    - develop_B
-    - develop_C
-    - develop_D
+# Bookers2-debug
+---
+
+![TOP](https://user-images.githubusercontent.com/124852092/242319452-639e6be4-1f40-45f7-bb7e-3c497eace876.png)
 
 ---
+
+## こちらは以下の５つのブランチがあります。
 
 <table>
   <thead>
@@ -38,12 +38,6 @@
       <td> develop_D </td> <td>【レビューサービスの機能を学ぼう】</td>
     </tr>
 </table>
-
----
-
-![TOP](https://user-images.githubusercontent.com/124852092/242319452-639e6be4-1f40-45f7-bb7e-3c497eace876.png)
-
----
 
 ## インストール方法
 * 以下のコマンドを上から順に実行してください。
