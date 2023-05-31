@@ -20,7 +20,7 @@
     <td> 一度評価をつけたら変えられない。 </td>
   </tr>
 </table>
-![D-7](https://github.com/DWC-user07-pro01-4M/Bookers2-debug/issues/14#issue-1733867450)
+![D-7](https://user-images.githubusercontent.com/124852092/242242815-4fc6b7f7-c908-4e40-9e54-31a394e91fc1.gif)
 
 <br>
 <table>
