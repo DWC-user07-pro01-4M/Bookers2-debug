@@ -1,24 +1,25 @@
-# README
+# 課題B-7/8/9【記録アプリの機能を学ぼう】
+## 課題B７
+|要件|
+|:----|
+| ユーザ詳細ページに、今日の投稿数を表示させる。|
+| ユーザ詳細ページに、前日の投稿数を表示させる。|
+| ユーザ詳細ページに、前日と今日の投稿数の差を表示させる<br>
+(今日の数値 / その前日の数値)。|
+| ユーザ詳細ページに、今週の投稿数の合計を表示させる。|
+| ユーザ詳細ページに、先週の投稿数の合計を表示させる。|
+| ユーザ詳細ページに、今週と先週の投稿数の差を表示させる(先週と比べる)。|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 課題B８
+|要件|
+|:----|
+| 過去 7 日間分、それぞれの投稿数を一覧表示させる。|
+| chart.js を使って、過去 7 日分の投稿数グラフ化。|
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 課題B９
+|要件|
+|:----|
+| ユーザ詳細ページに、指定した日の記録(投稿数)を非同期で表示させる。|
+|<br>|
+![B-7-8-9](https://user-images.githubusercontent.com/124852092/242296184-a87f02f8-cd67-4c27-905f-07d7bd33a139.gif)
+|<br>|

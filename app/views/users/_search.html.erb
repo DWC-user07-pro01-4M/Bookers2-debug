@@ -15,7 +15,7 @@
 
 <!--模範解答-->
 <div class="my-3">
-  <%= form_with url: user_search_path(user), method: :get, class: "row justify-content-center", local: false do |f| %>
+  <%= form_with url: user_search_path(user), method: :get, class: "row justify-content-start", local: false do |f| %>
     <div class="col-auto">
       <%= f.date_field :created_at, class: "form-control" %>
     </div>
