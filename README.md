@@ -20,7 +20,8 @@
     <td> 一度評価をつけたら変えられない。 </td>
   </tr>
 </table>
-![D-7](https://github.com/DWC-user07-pro01-4M/Bookers2-debug/assets/124852092/a6691445-a33a-4146-affe-203646fad0ff)
+![D-7](https://github.com/DWC-user07-pro01-4M/Bookers2-debug/issues/14#issue-1733867450)
+
 <br>
 <table>
   <caption>課題D８</caption>
