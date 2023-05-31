@@ -5,16 +5,35 @@
     - develop_C
     - develop_D
 
-| 各ブランチと内容 |
-----|----
-| main | 【フォロー/フォロワー機能」を実装】|
-|      | 【検索機能を実装】|
-|      | 【いいね/コメント機能を実装】|
-|      | 【いいね/コメント機能の非同期通信化】|
-| develop_A | 【SNSの機能を学ぼう】 |
-| develop_B | 【記録アプリの機能を学ぼう】 |
-| develop_C | 【コミュニティアプリの機能を学ぼう】 |
-| develop_D | 【レビューサービスの機能を学ぼう】 |
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>ブランチ</th> <th>内容</th>
+    </tr>
+  </thead>
+    <tr>
+      <td> main </td> <td> 【フォロー/フォロワー機能」を実装】 </td>
+      <td>  </td> <td> 【検索機能を実装】 </td>
+      <td>  </td> <td> 【いいね/コメント機能を実装】 </td>
+      <td>  </td> <td> 【いいね/コメント機能の非同期通信化】 </td>
+    </tr>
+    <tr>
+      <td> develop_A </td> <td>【SNSの機能を学ぼう】</td>
+    </tr>
+    <tr>
+      <td> develop_B </td> <td>【記録アプリの機能を学ぼう】</td>
+    </tr>
+    <tr>
+      <td> develop_C </td> <td>【コミュニティアプリの機能を学ぼう】</td>
+    </tr>
+    <tr>
+      <td> develop_D </td> <td>【レビューサービスの機能を学ぼう】</td>
+    </tr>
+</table>
+
+---
 
 ![TOP](https://user-images.githubusercontent.com/124852092/242319452-639e6be4-1f40-45f7-bb7e-3c497eace876.png)
 
