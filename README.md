@@ -1,17 +1,18 @@
 # 課題D-7/8/9【レビューサービスの機能を学ぼう】
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+:::note info
+課題 7D
+:::
 
-Things you may want to cover:
+要件
 
-* Ruby version
+* ユーザ自身の投稿にのみ、5 段階評価をつけられる。評価をつけられるタイミングは、投稿時に限定される。
 
-* System dependencies
+* 本の一覧ページと詳細ページに 5 段階評価を表示させる。
 
-* Configuration
+* ユーザーの詳細ページに 5 段階評価を表示させる。
 
-* Database creation
+* 一度評価をつけたら変えられない。
 
 * Database initialization
 
