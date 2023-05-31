@@ -20,4 +20,4 @@
     <td> 一度評価をつけたら変えられない。 </td>
   </tr>
 </table>
-![circleanimationmuvie](https://github.com/DWC-user07-pro01-4M/Bookers2-debug/assets/124852092/f25d4582-7963-4e52-ba79-281cfbcfa019.gif)
+https://github.com/DWC-user07-pro01-4M/Bookers2-debug.wiki.git
