@@ -16,24 +16,21 @@
 | develop_C | 【コミュニティアプリの機能を学ぼう】 |
 | develop_D | 【レビューサービスの機能を学ぼう】 |
 
-## インストール方法
-* 以下のコマンドを上から順に実行してください。
-```
-git clone git@github.com:DWC-user07-pro01-4M/Bookers2-debug.git
-```
-
-```
-cd bookers2-debug
-```
-
-```
-rails db:migrate
-```
-
-```
-yarn install
-```
-
-```
-bundle install
-```
+|## インストール方法|
+|:----|
+|* 以下のコマンドを上から順に実行してください。|
+|```|
+|git clone git@github.com:DWC-user07-pro01-4M/Bookers2-debug.git|
+|```|
+|```|
+|cd bookers2-debug|
+|```|
+|```|
+|rails db:migrate|
+|```|
+|```|
+|yarn install|
+|```|
+|```|
+|bundle install|
+|```|
