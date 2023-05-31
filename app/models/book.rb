@@ -5,8 +5,13 @@ class Book < ApplicationRecord
 
   validates :title,presence:true
   validates :body,presence:true,length:{maximum:200}
+
   # 応用課題D９から追記
   validates :tag,presence:true
+
+  # 応用課題D８から追記
+  scope :latest, -> {order(created_at: :desc)}
+  scope :star_count, -> {order(rate: :desc)}
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?

@@ -21,7 +21,7 @@
   </tr>
 </table>
 ![D-7](https://github.com/DWC-user07-pro01-4M/Bookers2-debug/assets/124852092/a6691445-a33a-4146-affe-203646fad0ff)
-
+<br>
 <table>
   <caption>課題D８</caption>
   <thead>
@@ -40,6 +40,7 @@
   </tr>
 </table>
 
+<br>
 <table>
   <caption>課題D９</caption>
   <thead>
