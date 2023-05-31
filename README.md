@@ -16,21 +16,29 @@
 | develop_C | 【コミュニティアプリの機能を学ぼう】 |
 | develop_D | 【レビューサービスの機能を学ぼう】 |
 
-|## インストール方法|
-|:----|
-|* 以下のコマンドを上から順に実行してください。|
-|```|
-|git clone git@github.com:DWC-user07-pro01-4M/Bookers2-debug.git|
-|```|
-|```|
-|cd bookers2-debug|
-|```|
-|```|
-|rails db:migrate|
-|```|
-|```|
-|yarn install|
-|```|
-|```|
-|bundle install|
-|```|
+![TOP](https://user-images.githubusercontent.com/124852092/242319452-639e6be4-1f40-45f7-bb7e-3c497eace876.png)
+
+---
+
+## インストール方法
+* 以下のコマンドを上から順に実行してください。
+```
+git clone git@github.com:DWC-user07-pro01-4M/Bookers2-debug.git
+```
+
+```
+cd bookers2-debug
+```
+
+```
+rails db:migrate
+```
+
+```
+yarn install
+```
+
+```
+bundle install
+```
+* rails sでサーバーを立ち上げ、ブラウザで閲覧できれば成功です。
