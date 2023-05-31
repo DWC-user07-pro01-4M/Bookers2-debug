@@ -1,27 +1,22 @@
 # 課題D-7/8/9【レビューサービスの機能を学ぼう】
 
-:::note info
-インフォメーション
-infoは省略可能です。
-:::
-
-要件
-
-* ユーザ自身の投稿にのみ、5 段階評価をつけられる。評価をつけられるタイミングは、投稿時に限定される。
-
-* 本の一覧ページと詳細ページに 5 段階評価を表示させる。
-
-* ユーザーの詳細ページに 5 段階評価を表示させる。
-
-* 一度評価をつけたら変えられない。
-
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<table>
+  <caption>課題D7</caption>
+  <thead>
+    <tr>
+      <th>要件</th>
+    </tr>
+  </thead>
+  <tr>
+    <td> ユーザ自身の投稿にのみ、5 段階評価をつけられる。評価をつけられるタイミングは、投稿時に限定される。 </td>
+  </tr>
+  <tr>
+    <td> 本の一覧ページと詳細ページに 5 段階評価を表示させる。 </td>
+  </tr>
+  <tr>
+    <td> ユーザーの詳細ページに 5 段階評価を表示させる。 </td>
+  </tr>
+  <tr>
+    <td> 一度評価をつけたら変えられない。 </td>
+  </tr>
+</table>
